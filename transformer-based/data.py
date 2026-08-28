@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import sys
+from collections import Counter
 from dataclasses import asdict, dataclass
 from datetime import UTC, datetime
 from pathlib import Path
@@ -367,3 +368,161 @@ class DataSource:
         except (TypeError, ValueError):
             pass
         return value.item() if hasattr(value, "item") else value
+
+
+# NUPRC bonny price: https://www.nuprc.gov.ng/reports/oil-production-report
+# FMDQ
+# Pipe all CBN reports, circulars
+
+
+SNAPSHOT_WIDTH = 118
+SNAPSHOT_CELL_WIDTH = 57
+
+
+def _snapshot_clip(text: str, max_width: int) -> str:
+    compact = " ".join(text.split())
+    if len(compact) <= max_width:
+        return compact
+    return compact[: max_width - 1].rstrip() + "…"
+
+
+def _snapshot_value(value: Any, *, max_width: int = 42) -> str:
+    """Format one scalar for compact terminal output."""
+    if isinstance(value, (datetime, pd.Timestamp)):
+        text = value.isoformat()
+    else:
+        try:
+            if pd.isna(value):
+                return "—"
+        except (TypeError, ValueError):
+            pass
+
+        if isinstance(value, float):
+            if value and abs(value) < 0.0001:
+                text = f"{value:.4e}"
+            else:
+                text = f"{value:,.6f}".rstrip("0").rstrip(".")
+        elif isinstance(value, int) and not isinstance(value, bool):
+            text = f"{value:,}"
+        elif isinstance(value, (dict, list, tuple)):
+            text = json.dumps(DataSource._json_value(value), ensure_ascii=False)
+        else:
+            text = str(value)
+
+    return _snapshot_clip(text, max_width)
+
+
+def _snapshot_section(title: str, detail: str = "") -> list[str]:
+    heading = title if not detail else f"{title}  [{detail}]"
+    return ["", heading, "-" * min(SNAPSHOT_WIDTH, len(heading))]
+
+
+def _snapshot_mapping(values: dict[str, Any]) -> list[str]:
+    """Lay key/value pairs out in two terminal-friendly columns."""
+    cells = [
+        _snapshot_clip(f"{key}: {_snapshot_value(value)}", SNAPSHOT_CELL_WIDTH)
+        for key, value in values.items()
+    ]
+    midpoint = (len(cells) + 1) // 2
+    left, right = cells[:midpoint], cells[midpoint:]
+    lines: list[str] = []
+    for index, left_cell in enumerate(left):
+        right_cell = right[index] if index < len(right) else ""
+        lines.append(f"  {left_cell:<{SNAPSHOT_CELL_WIDTH}}  {right_cell}".rstrip())
+    return lines or ["  (no data)"]
+
+
+def _snapshot_frame(title: str, frame: pd.DataFrame) -> list[str]:
+    if frame.empty:
+        return _snapshot_section(title, "0 rows") + ["  (no data)"]
+
+    latest = frame.iloc[-1]
+    timestamp = frame.index[-1]
+    values: dict[str, Any] = {}
+    if not isinstance(frame.index, pd.RangeIndex):
+        values[frame.index.name or "timestamp"] = timestamp
+    values.update(latest.to_dict())
+    detail = f"{len(frame):,} rows · latest row"
+    return _snapshot_section(title, detail) + _snapshot_mapping(values)
+
+
+def format_snapshot(data: DataSource.DataSchema, *, news_limit: int = 5) -> str:
+    """Return a readable time=t terminal snapshot of every DataSchema source."""
+    lines = [
+        "=" * SNAPSHOT_WIDTH,
+        "RATEPREDICT DATA SNAPSHOT",
+        f"time=t: {data.as_of.isoformat()}  |  schema: {data.schema_version}",
+        "=" * SNAPSHOT_WIDTH,
+    ]
+
+    lines.extend(_snapshot_frame("USDT/NGN HISTORY", data.usdt_ngn))
+    lines.extend(_snapshot_frame("BTC/NGN HISTORY", data.btc_ngn))
+    lines.extend(_snapshot_frame("EXTERNAL MARKETS", data.external_markets))
+    lines.extend(_snapshot_frame("MODEL FEATURES", data.features))
+
+    lines.extend(_snapshot_section("LIVE RATES", f"{len(data.live_rates)} markets"))
+    if data.live_rates:
+        for market, quote in data.live_rates.items():
+            lines.append(f"  {market.upper()}")
+            if isinstance(quote, dict):
+                lines.extend(_snapshot_mapping(quote))
+            else:
+                lines.append(f"    {_snapshot_value(quote)}")
+    else:
+        lines.append("  (no data)")
+
+    shown_news = max(0, min(news_limit, len(data.news)))
+    lines.extend(_snapshot_section("NEWS", f"{len(data.news)} items · showing {shown_news}"))
+    if shown_news:
+        for index, item in enumerate(data.news[:shown_news], start=1):
+            published = _snapshot_value(item.get("published"), max_width=25)
+            source = _snapshot_value(item.get("source", "unknown"), max_width=24)
+            relevance = _snapshot_value(item.get("relevance"), max_width=8)
+            title = _snapshot_value(item.get("title", "untitled"), max_width=76)
+            lines.append(f"  {index}. [{published}] {source} · relevance={relevance}")
+            lines.append(f"     {title}")
+    else:
+        lines.append("  (no data)")
+
+    categories = Counter(
+        str(event.get("category", "Uncategorised")) for event in data.macro_calendar
+    )
+    lines.extend(_snapshot_section("MACRO CALENDAR", f"{len(data.macro_calendar)} events"))
+    lines.extend(_snapshot_mapping(dict(sorted(categories.items()))))
+
+    lines.extend(_snapshot_frame("SIGNAL HISTORY", data.signal_history))
+
+    lines.extend(_snapshot_section("MARKET NOTES"))
+    lines.append(f"  {data.market_notes or '(none)'}")
+
+    lines.extend(_snapshot_section("SOURCE STATUSES", f"{len(data.source_statuses)} checks"))
+    if data.source_statuses:
+        lines.append(f"  {'STATUS':<10} {'SOURCE':<38} {'LATEST':<25} MESSAGE")
+        lines.append(f"  {'-' * 8:<10} {'-' * 36:<38} {'-' * 23:<25} {'-' * 35}")
+        for status in data.source_statuses:
+            state = _snapshot_value(status.get("status", "unknown"), max_width=8).upper()
+            source = _snapshot_value(status.get("source_id", "unknown"), max_width=36)
+            latest = _snapshot_value(status.get("latest_timestamp"), max_width=23)
+            message = _snapshot_value(status.get("message"), max_width=35)
+            lines.append(f"  {state:<10} {source:<38} {latest:<25} {message}")
+    else:
+        lines.append("  (no status checks recorded)")
+
+    lines.extend(["", "=" * SNAPSHOT_WIDTH])
+    return "\n".join(lines)
+
+
+def main(source: DataSource | None = None) -> int:
+    """Collect and print a current snapshot when this module is run directly."""
+    try:
+        data = (source or DataSource()).source(refresh=True)
+    except Exception as exc:
+        print(f"Unable to build data snapshot: {exc}", file=sys.stderr)
+        return 1
+
+    print(format_snapshot(data))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
