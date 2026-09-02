@@ -6,16 +6,21 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+import torch
 
 
 TRANSFORMER_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(TRANSFORMER_DIR))
 
 from dataset import (
+    DailyMultimodalDataset,
     DatasetConfig,
     discover_valid_sample_end_dates,
+    fit_train_normalizers,
     prepare_daily_data,
 )
+from labels import TARGET_NAMES
+from normalization import DatasetNormalizers, NamedStandardizer
 
 
 class DailyDataPreparationTests(unittest.TestCase):
@@ -150,6 +155,161 @@ class DailyDataPreparationTests(unittest.TestCase):
                 quantitative,
                 {"first": duplicate_text},
                 ("mpr",),
+                    config,
+                )
+
+
+class LazyDatasetTests(unittest.TestCase):
+    def make_inputs(
+        self,
+    ) -> tuple[pd.DataFrame, dict[str, pd.DataFrame], DatasetConfig]:
+        dates = pd.date_range("2026-01-01", periods=12, freq="D", tz="UTC")
+        average = np.arange(100.0, 112.0)
+        quantitative = pd.DataFrame(
+            {
+                "feature": np.arange(1.0, 13.0),
+                "avg_rate": average,
+                "high_rate": average + 2.0,
+                "low_rate": average - 3.0,
+            },
+            index=dates,
+        )
+        quantitative.loc[dates[9], "feature"] = 10_000.0
+        quantitative.loc[dates[9], ["avg_rate", "high_rate", "low_rate"]] = [
+            50_000.0,
+            75_000.0,
+            25_000.0,
+        ]
+        base_embeddings = np.arange(24, dtype=float).reshape(12, 2)
+        text_embeddings = {
+            "vanguard": pd.DataFrame(
+                base_embeddings + 100.0,
+                index=dates,
+                columns=["e0", "e1"],
+            ),
+            "businessday": pd.DataFrame(
+                base_embeddings,
+                index=dates,
+                columns=["e0", "e1"],
+            ),
+        }
+        return (
+            quantitative,
+            text_embeddings,
+            DatasetConfig(lookback_days=3, horizon_days=2),
+        )
+
+    def test_fits_normalizers_from_unique_training_dates_and_targets_only(self) -> None:
+        quantitative, text_embeddings, config = self.make_inputs()
+        prepared = prepare_daily_data(
+            quantitative,
+            text_embeddings,
+            ("feature",),
+            config,
+        )
+
+        normalizers = fit_train_normalizers(
+            prepared,
+            training_sample_end_dates=prepared.dates[[2, 3, 4]],
+            config=config,
+        )
+
+        self.assertEqual(normalizers.quantitative.mean[0], 3.0)
+        np.testing.assert_allclose(normalizers.target.mean, [1.5, 2.0, -3.0])
+
+    def test_returns_exact_lazy_windows_as_typed_tensors(self) -> None:
+        quantitative, text_embeddings, config = self.make_inputs()
+        prepared = prepare_daily_data(
+            quantitative,
+            text_embeddings,
+            ("feature",),
+            config,
+        )
+        normalizers = fit_train_normalizers(
+            prepared,
+            training_sample_end_dates=prepared.dates[[2, 3, 4]],
+            config=config,
+        )
+        training_dataset = DailyMultimodalDataset(
+            prepared,
+            sample_end_dates=prepared.dates[[4]],
+            normalizers=normalizers,
+            config=config,
+        )
+
+        sample = training_dataset[0]
+
+        self.assertEqual(len(training_dataset), 1)
+        self.assertEqual(
+            set(sample),
+            {"quantitative", "quantitative_mask", "text", "text_mask", "target", "as_of"},
+        )
+        self.assertEqual(tuple(sample["quantitative"].shape), (3, 1))
+        self.assertEqual(tuple(sample["quantitative_mask"].shape), (3, 1))
+        self.assertEqual(tuple(sample["text"].shape), (3, 2, 2))
+        self.assertEqual(tuple(sample["text_mask"].shape), (3, 2))
+        self.assertEqual(tuple(sample["target"].shape), (2, 3))
+        self.assertEqual(sample["quantitative"].dtype, torch.float32)
+        self.assertEqual(sample["quantitative_mask"].dtype, torch.bool)
+        self.assertEqual(sample["text"].dtype, torch.float32)
+        self.assertEqual(sample["text_mask"].dtype, torch.bool)
+        self.assertEqual(sample["target"].dtype, torch.float32)
+        self.assertEqual(sample["as_of"].dtype, torch.int64)
+        self.assertEqual(int(sample["as_of"]), prepared.dates[4].value)
+        np.testing.assert_allclose(
+            normalizers.quantitative.inverse_transform(
+                sample["quantitative"].numpy(),
+                prepared.quantitative_feature_names,
+            ),
+            [[3.0], [4.0], [5.0]],
+        )
+        np.testing.assert_allclose(
+            normalizers.target.inverse_transform(
+                sample["target"].numpy(),
+                TARGET_NAMES,
+            ),
+            [[1.0, 2.0, -3.0], [2.0, 2.0, -3.0]],
+        )
+        self.assertEqual(training_dataset.prepared.quantitative_values.ndim, 2)
+        self.assertEqual(training_dataset.prepared.text_values.ndim, 3)
+
+    def test_rejects_empty_invalid_or_normalizer_incompatible_origins(self) -> None:
+        quantitative, text_embeddings, config = self.make_inputs()
+        prepared = prepare_daily_data(
+            quantitative,
+            text_embeddings,
+            ("feature",),
+            config,
+        )
+        normalizers = fit_train_normalizers(
+            prepared,
+            training_sample_end_dates=prepared.dates[[2, 3, 4]],
+            config=config,
+        )
+
+        with self.assertRaisesRegex(ValueError, "at least one sample end date"):
+            DailyMultimodalDataset(prepared, [], normalizers, config)
+
+        with self.assertRaisesRegex(ValueError, "invalid sample end dates"):
+            DailyMultimodalDataset(
+                prepared,
+                [prepared.dates[-1]],
+                normalizers,
+                config,
+            )
+
+        incompatible = DatasetNormalizers(
+            quantitative=NamedStandardizer.fit(
+                np.array([[1.0], [2.0]]),
+                ("wrong",),
+            ),
+            target=normalizers.target,
+        )
+        with self.assertRaisesRegex(ValueError, "quantitative normalizer"):
+            DailyMultimodalDataset(
+                prepared,
+                [prepared.dates[4]],
+                incompatible,
                 config,
             )
 
