@@ -1,0 +1,301 @@
+date,country,indicator_id,indicator,value,unit,obs_status,decimal
+2006-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,36517576727.8672,,,0
+2006-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",4854353979.09082,,,0
+2006-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",1769162544.85626,,,0
+2006-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,16932144078.5376,,,0
+2006-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,33.9527757042,,,1
+2006-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),42735039033.3081,,,0
+2006-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),36.3507212028386,,,1
+2006-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",8.22743678120907,,,1
+2006-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2006-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2006-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2006-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),238454997161.48,,,0
+2006-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),6.05942803202491,,,1
+2006-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),14.8803763188218,,,1
+2006-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",128.651666666667,,,2
+2007-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,27648255973.9624,,,0
+2007-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",6036021404.82068,,,0
+2007-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",1447330958.33184,,,0
+2007-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,18014430786.8868,,,0
+2007-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,108.3032702742,,,1
+2007-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),51906164585.6826,,,0
+2007-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),87.7613486371324,,,1
+2007-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",5.38610421570143,,,1
+2007-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2007-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2007-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2007-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),278260846800.103,,,0
+2007-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),6.59113036066867,,,1
+2007-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),13.8343651228424,,,1
+2007-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",125.808108333333,,,2
+2008-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,29145209282.7053,,,0
+2008-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",8194071895.46246,,,0
+2008-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",-953448580.264267,,,0
+2008-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,19199974036.2717,,,0
+2008-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,,,,1
+2008-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),53598093556.5368,,,0
+2008-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),42.2234295522794,,,1
+2008-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",11.583054796681,,,1
+2008-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2008-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2008-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2008-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),339476276257.793,,,0
+2008-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),6.76447277784263,,,1
+2008-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),15.529944090028,,,1
+2008-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",118.566666666667,,,2
+2009-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,13869493317.9963,,,0
+2009-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",8555990006.71681,,,0
+2009-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",487342221.923696,,,0
+2009-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,18370796914.562,,,0
+2009-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,-35.3987413125,,,1
+2009-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),43129830238.1048,,,0
+2009-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),14.8643529361757,,,1
+2009-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",12.5379242951095,,,1
+2009-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2009-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2009-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2009-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),295008835380.997,,,0
+2009-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),8.03692510100366,,,1
+2009-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),8.67398818858118,,,1
+2009-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",148.88,,,2
+2010-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,13111276866.0477,,,0
+2010-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",6026253091.34715,,,0
+2010-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",2153299955.08907,,,0
+2010-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,19744755062.5938,,,0
+2010-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,20.2921873394667,,,1
+2010-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),33305051215.6973,,,0
+2010-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),6.72486734324051,,,1
+2010-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",13.7400521363694,,,1
+2010-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2010-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2010-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2010-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),366990417129.04,,,0
+2010-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),8.00565591623166,,,1
+2010-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),12.0986066267503,,,1
+2010-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",150.2975,,,2
+2011-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,10668377374.3563,,,0
+2011-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",8841062050.7726,,,0
+2011-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",2570808286.61954,,,0
+2011-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,20616772500.8206,,,0
+2011-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,-29.5426338280078,,,1
+2011-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),33691784435.7376,,,0
+2011-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),21.685616238181,,,1
+2011-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",10.8261371880018,,,1
+2011-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2011-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2011-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2011-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),414466676831.16,,,0
+2011-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),5.30792420293915,,,1
+2011-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),15.5113433318503,,,1
+2011-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",153.8625,,,2
+2012-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,17374274674.8298,,,0
+2012-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",7069908427.9365,,,0
+2012-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",9959018733.20634,,,0
+2012-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,20542884459.8857,,,0
+2012-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,52.948821126675,,,1
+2012-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),44973806131.6587,,,0
+2012-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),27.0844679750277,,,1
+2012-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",12.2242413020582,,,1
+2012-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2012-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2012-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2012-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),463971018239.281,,,0
+2012-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),4.23006117492493,,,1
+2012-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),13.0904727134596,,,1
+2012-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",157.5,,,2
+2013-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,19048981238.3773,,,0
+2013-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",5562857987.46966,,,0
+2013-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",5532059839.76553,,,0
+2013-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,20797073957.3776,,,0
+2013-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,30.1624941160652,,,1
+2013-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),43675023637.5804,,,0
+2013-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),14.3020860661396,,,1
+2013-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",8.49551838265678,,,1
+2013-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2013-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2013-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2013-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),520117180313.906,,,0
+2013-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),6.67133539308232,,,1
+2013-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),9.88011499667836,,,1
+2013-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",157.311666666667,,,2
+2014-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,906535877.208596,,,0
+2014-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",4693828631.89583,,,0
+2014-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",1044955627.9525,,,0
+2014-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,20999084800,,,0
+2014-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,-31.8551732185481,,,1
+2014-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),35070259874.4871,,,0
+2014-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),-0.794167076060823,,,1
+2014-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",8.04741087967907,,,1
+2014-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2014-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2014-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2014-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),574183763411.508,,,0
+2014-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),6.30971865521856,,,1
+2014-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),7.0738580847829,,,1
+2014-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",158.552641666667,,,2
+2015-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,-15438642533.9653,,,0
+2015-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",3064168904.45333,,,0
+2015-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",-476619500,,,0
+2015-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,20626046924.0079,,,0
+2015-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,-26.8280550427437,,,1
+2015-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),29011450144.31,,,0
+2015-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),4.09015662855131,,,1
+2015-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",9.00943498007706,,,1
+2015-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2015-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2015-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2015-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),493026682800.63,,,0
+2015-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),2.65269329541779,,,1
+2015-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),2.78345150643408,,,1
+2015-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",192.440333333333,,,2
+2016-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,5077217476.10779,,,0
+2016-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",3453258407.9848,,,0
+2016-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",325124999.999999,,,0
+2016-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,19697938003.8912,,,0
+2016-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,-42.2080341436879,,,1
+2016-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),28020197619.3379,,,0
+2016-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),31.9221686077306,,,1
+2016-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",15.6968126387972,,,1
+2016-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2016-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2016-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2016-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),404649125252.16,,,0
+2016-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),-1.61686894903467,,,1
+2016-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),2.68429043488445,,,1
+2016-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",253.492,,,2
+2017-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,13563765219.2942,,,0
+2017-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",2412974916.23263,,,0
+2017-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",1360441234.49108,,,0
+2017-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,22037016831.8378,,,0
+2017-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,37.421961987168,,,1
+2017-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),40499220796.3652,,,0
+2017-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),1.38782910951685,,,1
+2017-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",16.5022662139641,,,1
+2017-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2017-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2017-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2017-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),375745731053.427,,,0
+2017-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),0.805886619091581,,,1
+2017-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),5.47262882301734,,,1
+2017-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",305.790109160005,,,2
+2018-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,7283154462.97248,,,0
+2018-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",775247400.003029,,,0
+2018-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",1259167883.85656,,,0
+2018-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,24311022415.6069,,,0
+2018-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,-17.8596820185501,,,1
+2018-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),43719362674.791,,,0
+2018-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),14.9821100195079,,,1
+2018-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",12.0951065173432,,,1
+2018-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2018-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2018-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2018-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),421739251509.08,,,0
+2018-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),1.92275734199798,,,1
+2018-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),7.69068153465603,,,1
+2018-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",306.083688245234,,,2
+2019-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,-13685219004.1987,,,0
+2019-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",2305099811.70357,,,0
+2019-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",-1548463201.73002,,,0
+2019-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,23809281401.0144,,,0
+2019-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,-19.6923043079691,,,1
+2019-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),39382191478.7729,,,0
+2019-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),6.44863105130051,,,1
+2019-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",11.3964223378115,,,1
+2019-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2019-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2019-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2019-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),668219992686.575,,,0
+2019-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),2.20842927835211,,,1
+2019-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),6.51475056054778,,,1
+2019-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",306.920951495222,,,2
+2020-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,-15985927540.7668,,,0
+2020-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",2385277665.91607,,,0
+2020-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",-255230064.900555,,,0
+2020-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,17207547305.9954,,,0
+2020-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,8.51047017082438,,,1
+2020-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),38028751517.615,,,0
+2020-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),11.6325456444643,,,1
+2020-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",13.2460234276598,,,1
+2020-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2020-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2020-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2020-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),598586817817.392,,,0
+2020-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),-6.36889840468527,,,1
+2020-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),3.31241719212516,,,1
+2020-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",358.810797258297,,,2
+2021-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,-3254163170.28253,,,0
+2021-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",3313210000,,,0
+2021-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",71602136.4597128,,,0
+2021-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,19483402058.9105,,,0
+2021-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,0.178471893712939,,,1
+2021-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),41727503547.2316,,,0
+2021-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),14.2374143355273,,,1
+2021-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",16.9528457221608,,,1
+2021-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2021-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2021-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2021-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),609147716965.348,,,0
+2021-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),1.109252540249,,,1
+2021-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),6.24674969005013,,,1
+2021-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",401.152029220779,,,2
+2022-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,1018598846.08075,,,0
+2022-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",-186792428.930928,,,0
+2022-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",293462952.902713,,,0
+2022-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,20127614150.5134,,,0
+2022-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,-13.3724296237404,,,1
+2022-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),36809762970.197,,,0
+2022-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),17.4226051694979,,,1
+2022-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",18.8471877843274,,,1
+2022-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2022-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2022-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2022-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),646950257575.455,,,0
+2022-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),4.31882949157136,,,1
+2022-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),,,,1
+2022-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",425.979158066857,,,2
+2023-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,6423222719.52035,,,0
+2023-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",1872520530.04694,,,0
+2023-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",1588279928.2485,,,0
+2023-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,19549549365.0158,,,0
+2023-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,,,,1
+2023-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),33452495121.7329,,,0
+2023-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),50.9219774754511,,,1
+2023-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",24.659550203114,,,1
+2023-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2023-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2023-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2023-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),487387801877.803,,,0
+2023-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),3.31590368111438,,,1
+2023-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),,,,1
+2023-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",645.194067883201,,,2
+2024-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,19030975715.3095,,,0
+2024-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",1614032956.92931,,,0
+2024-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",1917042383.3181,,,0
+2024-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,22126757545.065,,,0
+2024-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,,,,1
+2024-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),40405994024.7986,,,0
+2024-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),,,,1
+2024-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",33.2416590552749,,,1
+2024-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2024-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2024-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2024-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),252261880140.271,,,0
+2024-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),4.07106650147703,,,1
+2024-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),,,,1
+2024-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",1478.96519740023,,,2
+2025-01-01,NGA,BN.CAB.XOKA.CD,Current account balance,14039095685.7105,,,0
+2025-01-01,NGA,BX.KLT.DINV.CD.WD,"Foreign direct investment, net inflows",4005360386.61716,,,0
+2025-01-01,NGA,BX.PEF.TOTL.CD.WD,"Portfolio equity, net inflows",835527350.687741,,,0
+2025-01-01,NGA,BX.TRF.PWKR.CD.DT,Personal remittances received,22789097830.3714,,,0
+2025-01-01,NGA,CM.MKT.INDX.ZG,S&P Global Equity Indices annual change,,,,1
+2025-01-01,NGA,FI.RES.TOTL.CD,Total reserves including gold (current US$),46024916767.4055,,,0
+2025-01-01,NGA,FM.LBL.BMNY.ZG,Broad money growth (annual %),,,,1
+2025-01-01,NGA,FP.CPI.TOTL.ZG,"Inflation, consumer prices (annual %)",23.0101235833333,,,1
+2025-01-01,NGA,GC.DOD.TOTL.GD.ZS,Central government debt (% of GDP),,,,1
+2025-01-01,NGA,NE.EXP.GNFS.CD,Exports of goods and services,,,,0
+2025-01-01,NGA,NE.IMP.GNFS.CD,Imports of goods and services,,,,0
+2025-01-01,NGA,NY.GDP.MKTP.CD,GDP (current US$),290794361542.112,,,0
+2025-01-01,NGA,NY.GDP.MKTP.KD.ZG,GDP growth (annual %),4.01336180700973,,,1
+2025-01-01,NGA,NY.GDP.PETR.RT.ZS,Oil rents (% of GDP),,,,1
+2025-01-01,NGA,PA.NUS.FCRF,"Official exchange rate (LCU per US$, period average)",1518.38094813368,,,2
