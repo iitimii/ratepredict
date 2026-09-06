@@ -4,3 +4,12 @@ __pycache__/
 .env
 .venv/
 runtime/
+
+# Generated / large data artifacts (rebuildable, not versioned)
+data/raw/
+data/dataset/
+outputs/
+*.zip
+*.xls
+*.xlsx
+*.parquet
