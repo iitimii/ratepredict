@@ -10,6 +10,8 @@ X[t-364 ... t] -> y[t+1 ... t+7]
 
 ## Setup
 
+Before starting any training run, go over the [mandatory pre-training checklist](../docs/pre_training_checklist.md) and record the review outcome. See [current dataset completeness](../data/COMPLETENESS.md) and the [proposed embedding workflow](docs/unstructured_embedding_plan.md).
+
 From the repository root:
 
 ```bash
@@ -21,6 +23,16 @@ Run the isolated tests with:
 ```bash
 .venv/bin/python -m unittest discover -s transformer-based/tests -p 'test_*.py'
 ```
+
+Build the canonical partitioned Parquet store from all acquired sources with:
+
+```bash
+.venv/bin/python transformer-based/build_dataset_store.py
+```
+
+The output is `data/dataset/`; see `data/DATASET_STORAGE.md` for its typed
+schema, partitions, quality flags, and daily model view. A CSV exporter remains
+available only for interoperability.
 
 When importing these top-level modules from another script, add `transformer-based/` to `PYTHONPATH` or run the script from this directory.
 

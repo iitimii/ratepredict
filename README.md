@@ -11,6 +11,7 @@ It contains two layers:
 
 - [`docs/world_class_production_methodology_v3.md`](./docs/world_class_production_methodology_v3.md): End-to-end methodology and operating model.
 - [`docs/training_blueprint.md`](./docs/training_blueprint.md): Training objectives, required datapoints, dataset design, and environment guidance.
+- [`docs/pre_training_checklist.md`](./docs/pre_training_checklist.md): Mandatory review before any training run; record scope, target definitions, leakage checks, and readiness.
 - [`docs/runtime_data_pipeline.md`](./docs/runtime_data_pipeline.md): Scheduled runtime bar refresh, cached external data flow, and remaining source decisions.
 - [`docs/data_contracts.md`](./docs/data_contracts.md): Point-in-time data contracts and interface semantics.
 - [`docs/acceptance_gatebook.md`](./docs/acceptance_gatebook.md): Formal pass/fail gates for promotion, continuation, and stop-review.
