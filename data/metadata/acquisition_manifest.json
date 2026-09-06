@@ -1,0 +1,789 @@
+{
+  "generated_at": "2026-09-02T17:17:40.992864+00:00",
+  "user_agent": "Mozilla/5.0 (compatible; ratepredict-research/0.1; +https://github.com/oxowolabi/ratepredict)",
+  "files": [
+    {
+      "url": "https://www.cbn.gov.ng/api/GetAllDailyCrude",
+      "path": "raw/quantitative/cbn/daily_crude.json",
+      "content_type": "application/json; charset=utf-8",
+      "fetched_at": "2026-09-02T17:03:39.858788+00:00",
+      "sha256": "476b780f5b95dda3f1572e264c20fba872aa81fa48586fd8d72384f4f8d68df3",
+      "bytes": 244315,
+      "rows": 3942
+    },
+    {
+      "url": "https://www.cbn.gov.ng/api/GetAllExchangeRates",
+      "path": "raw/quantitative/cbn/exchange_rates.json",
+      "content_type": "application/json; charset=utf-8",
+      "fetched_at": "2026-09-02T17:03:38.502154+00:00",
+      "sha256": "b5b96b755503fab831a0be006b3658e4ac11566b5836d932f89dff391da1fa3e",
+      "bytes": 8112936,
+      "rows": 61996
+    },
+    {
+      "url": "https://www.cbn.gov.ng/api/GetAllSecurities",
+      "path": "raw/quantitative/cbn/government_securities.json",
+      "content_type": "application/json; charset=utf-8",
+      "fetched_at": "2026-09-02T17:03:43.815511+00:00",
+      "sha256": "db46f51edd5242499ece4b54c1066fe90a05993bc7c74a7d4d0546182194471b",
+      "bytes": 2226431,
+      "rows": 4754
+    },
+    {
+      "url": "https://www.cbn.gov.ng/api/GetAllInflationRates",
+      "path": "raw/quantitative/cbn/inflation.json",
+      "content_type": "application/json; charset=utf-8",
+      "fetched_at": "2026-09-02T17:03:42.909743+00:00",
+      "sha256": "3dc61bb5a26d4f310a007e2c63074d442a944bf6a6e682c49ed91fe111855639",
+      "bytes": 87397,
+      "rows": 282
+    },
+    {
+      "url": "https://www.cbn.gov.ng/api/GetAllMoneyAndCreditStats",
+      "path": "raw/quantitative/cbn/money_credit.json",
+      "content_type": "application/json; charset=utf-8",
+      "fetched_at": "2026-09-02T17:03:42.157429+00:00",
+      "sha256": "ae4dbc3307a19d8303e178ffb5174996212822c11af7a302251016162087acd2",
+      "bytes": 271573,
+      "rows": 435
+    },
+    {
+      "url": "https://www.cbn.gov.ng/api/GetAllMoneyMarketIndicators",
+      "path": "raw/quantitative/cbn/money_market.json",
+      "content_type": "application/json; charset=utf-8",
+      "fetched_at": "2026-09-02T17:03:41.389115+00:00",
+      "sha256": "ad4703a73205598777e7874618dfffa073b206d78537daa408a4586e57f2f97e",
+      "bytes": 76123,
+      "rows": 247
+    },
+    {
+      "url": "https://www.cbn.gov.ng/api/GetAllNFEM_Rates",
+      "path": "raw/quantitative/cbn/nfem_rates.json",
+      "content_type": "application/json; charset=utf-8",
+      "fetched_at": "2026-09-02T17:03:44.479632+00:00",
+      "sha256": "7cfe14d03e26598844e2387d3a450da13c9688665971a6f11dda9b9f40d69ef9",
+      "bytes": 121948,
+      "rows": 438
+    },
+    {
+      "url": "https://www.cbn.gov.ng/api/GetAllReserves",
+      "path": "raw/quantitative/cbn/reserves.json",
+      "content_type": "application/json; charset=utf-8",
+      "fetched_at": "2026-09-02T17:03:40.728125+00:00",
+      "sha256": "79253bc17edf6f7f718538e40317c54d12e4c53f7457a3836ffd3e1179c422bd",
+      "bytes": 697204,
+      "rows": 4903
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2&cosd=2006-01-01&coed=2026-09-02",
+      "path": "raw/quantitative/fred/BAMLH0A0HYM2.csv",
+      "content_type": "application/csv",
+      "fetched_at": "2026-09-02T16:06:29.670413+00:00",
+      "sha256": "3c24a9fc3bae8952ab0fd94019647a4251b41e5f40c7340e9db2dde19ff19101",
+      "bytes": 12702,
+      "rows": 794
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL&cosd=2006-01-01&coed=2026-09-02",
+      "path": "raw/quantitative/fred/CPIAUCSL.csv",
+      "content_type": "application/csv",
+      "fetched_at": "2026-09-02T16:06:25.388035+00:00",
+      "sha256": "1be67f6ae3534e048332b40fa22401e445b5543f0373cacdd3350989753a7556",
+      "bytes": 4712,
+      "rows": 247
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU&cosd=2006-01-01&coed=2026-09-02",
+      "path": "raw/quantitative/fred/DCOILBRENTEU.csv",
+      "content_type": "application/csv",
+      "fetched_at": "2026-09-02T16:06:22.937698+00:00",
+      "sha256": "1c1153be5e97e03cb4afc1ef7a7213a25b922b851174d5930aac6d8fbbcfb82f",
+      "bytes": 91930,
+      "rows": 5386
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2006-01-01&coed=2026-09-02",
+      "path": "raw/quantitative/fred/DFF.csv",
+      "content_type": "application/csv",
+      "fetched_at": "2026-09-02T16:06:20.914927+00:00",
+      "sha256": "ca9db824c5f919a3176f0197ae054150675710392626e4da51e60a46be5f2a25",
+      "bytes": 120789,
+      "rows": 7548
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2006-01-01&coed=2026-09-02",
+      "path": "raw/quantitative/fred/DGS10.csv",
+      "content_type": "application/csv",
+      "fetched_at": "2026-09-02T16:06:19.977239+00:00",
+      "sha256": "77a21617b5ed49b716d99875f07e68f8b1b23ae45626e30f405cb3c24bc81675",
+      "bytes": 85383,
+      "rows": 5390
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2&cosd=2006-01-01&coed=2026-09-02",
+      "path": "raw/quantitative/fred/DGS2.csv",
+      "content_type": "application/csv",
+      "fetched_at": "2026-09-02T16:06:18.794331+00:00",
+      "sha256": "14cd793cbfc7c80349f604c6a8f87d8856e006b423c322ea0b2345e15741ba3b",
+      "bytes": 85382,
+      "rows": 5390
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2006-01-01&coed=2026-09-02",
+      "path": "raw/quantitative/fred/DTWEXBGS.csv",
+      "content_type": "application/csv",
+      "fetched_at": "2026-09-02T16:06:21.875221+00:00",
+      "sha256": "b20c5bd9504f3c2af41ab42cac69d4220d5e43f3577688a7d60ce63e8a85eebd",
+      "bytes": 104045,
+      "rows": 5390
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10YIE&cosd=2006-01-01&coed=2026-09-02",
+      "path": "raw/quantitative/fred/T10YIE.csv",
+      "content_type": "application/csv",
+      "fetched_at": "2026-09-02T16:06:28.268190+00:00",
+      "sha256": "a509bad64ebcd087fe44a41d8ebbac2fac9cc4512d6446c62f5e200cd34ed6fb",
+      "bytes": 85400,
+      "rows": 5391
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS&cosd=2006-01-01&coed=2026-09-02",
+      "path": "raw/quantitative/fred/VIXCLS.csv",
+      "content_type": "application/csv",
+      "fetched_at": "2026-09-02T16:06:23.875562+00:00",
+      "sha256": "904935acff35a9914fa288dcd06ddf3d866d13cd8ec5704c98134db2dc909b40",
+      "bytes": 90803,
+      "rows": 5391
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/related-materials",
+      "path": "raw/quantitative/nbs_cpi/catalog_154_related_materials.html",
+      "content_type": "text/html; charset=UTF-8",
+      "fetched_at": "2026-09-02T17:16:49.016530+00:00",
+      "sha256": "281d966597ec332e868eaea013a53b201ce8cca854006c79ba5d7ebea01d010d",
+      "bytes": 219659,
+      "rows": 28
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1116",
+      "path": "raw/quantitative/nbs_cpi/packages/1116_CPI_NOVEMBER_2024.pdf",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:30.121103+00:00",
+      "sha256": "cc0dba951b275f86730f23b3e439e7242d7f25d81a2e6f8056edb9dd9b3d21eb",
+      "bytes": 2162798,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1117",
+      "path": "raw/quantitative/nbs_cpi/packages/1117_cpi_1NewNov_2024.xlsx",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:40.787676+00:00",
+      "sha256": "3c7970f1995eec2529e1acb9cd2a4bf5994f7af42b9106122f60e8ed2ac47930",
+      "bytes": 632230,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1126",
+      "path": "raw/quantitative/nbs_cpi/packages/1126_CPI_DEC_2024.pdf",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:27.506692+00:00",
+      "sha256": "1b551353d9925409b77dd312255d8db32d15229eaec641ec28d3917252c8d0d5",
+      "bytes": 2190885,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1127",
+      "path": "raw/quantitative/nbs_cpi/packages/1127_cpi_1NewDec2024.xlsx",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:38.450031+00:00",
+      "sha256": "800a5af98121ba3b4732773bf42879cd744f7e14203ec7f4beaab49997bb6406",
+      "bytes": 633607,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1156",
+      "path": "raw/quantitative/nbs_cpi/packages/1156_Highlights of CPI Rebasing Result.pdf",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:24.437884+00:00",
+      "sha256": "ca8c5968a08fb04527a76bdcf91a60e295f1b25701a27f94f59492016d477083",
+      "bytes": 297144,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1161",
+      "path": "raw/quantitative/nbs_cpi/packages/1161_CPI_february_2025.pdf",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:22.750246+00:00",
+      "sha256": "7dda597cdb5062bc3552687a260b385af1853b6e2fd61529ce5adb23b73f1b84",
+      "bytes": 1133866,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1162",
+      "path": "raw/quantitative/nbs_cpi/packages/1162_cpi_1New_Feb_2025.xlsx",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:36.641488+00:00",
+      "sha256": "c8c544a119c5a4b91de870c4c01bd92fc5e78c96a10304b136580640623c2c0b",
+      "bytes": 181738,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1198",
+      "path": "raw/quantitative/nbs_cpi/packages/1198_CPI_MARCH_2025.pdf",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:20.738249+00:00",
+      "sha256": "10f86f2ddc9f0677bbefafe057d57a1013c5f8aaf330a96b8b205eb8f7451533",
+      "bytes": 1113133,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1199",
+      "path": "raw/quantitative/nbs_cpi/packages/1199_cpi_1New_Mar25.xlsx",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:35.152890+00:00",
+      "sha256": "64dafb651efaadb242ad82ea5a92001fc494ad3559f668156e1bd06e1aea73fb",
+      "bytes": 162400,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1212",
+      "path": "raw/quantitative/nbs_cpi/packages/1212_CPI_APRIL_2025.pdf",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:18.177545+00:00",
+      "sha256": "ca8ee494cb4eb1a5d57c6c1aa758224a8a996bf8b24fea63520ee5cec979b83a",
+      "bytes": 1112275,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1213",
+      "path": "raw/quantitative/nbs_cpi/packages/1213_cpi_1New_Apr25.xlsx",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:33.621143+00:00",
+      "sha256": "69ad29ef5d9b19d483fd8c5883c72e2a71545e7641a054eabfe18a98e1fc0bcf",
+      "bytes": 226810,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1232",
+      "path": "raw/quantitative/nbs_cpi/packages/1232_CPI_May_2025_Report.pdf",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:16.707824+00:00",
+      "sha256": "3a5b4ad51656e0a1364da55d731305806f9961825e9d37990526dd489a754c8f",
+      "bytes": 1200805,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1233",
+      "path": "raw/quantitative/nbs_cpi/packages/1233_cpi_1New_May25.xlsx",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:32.322078+00:00",
+      "sha256": "9fb4eab5713bfbe7dcf4268e4a709d42848d19b23f14ff14b2cfb518329a4fa9",
+      "bytes": 227913,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1254",
+      "path": "raw/quantitative/nbs_cpi/packages/1254_CPI_June_2025_Report.pdf",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:14.974265+00:00",
+      "sha256": "3e6860321f3f3434a941ba8d7947e981d8f729e2ff6927ffae9549a91879c3f1",
+      "bytes": 1269316,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1255",
+      "path": "raw/quantitative/nbs_cpi/packages/1255_cpi_1New_June25.xlsx",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:31.232910+00:00",
+      "sha256": "ad272f2979b973183db23d6bb8a3bf026814f760598cc98ca607cfe22020620b",
+      "bytes": 231862,
+      "rows": 1
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1276",
+      "path": "raw/quantitative/nbs_cpi/packages/1276_July_2025_CPI_Report.zip",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:13.147308+00:00",
+      "sha256": "aa0874cb9704cc1b4eb0c45ea89e2820ca5291cf868a4e5d6bf9f0367d1cd0ac",
+      "bytes": 1280677,
+      "rows": 2
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1286",
+      "path": "raw/quantitative/nbs_cpi/packages/1286_CPI_AUGUST_2025.zip",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:11.375422+00:00",
+      "sha256": "d0247e0adf771cc3b3a280630a9645e942e2d9953b38ee8f7b704b230caa8d32",
+      "bytes": 1205297,
+      "rows": 2
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1297",
+      "path": "raw/quantitative/nbs_cpi/packages/1297_CPI_September_2025.zip",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:09.713139+00:00",
+      "sha256": "167b9052d682d6ccbaeb5c28bcb665a40f742299f3ae3d4faaea5641089b27a4",
+      "bytes": 1274070,
+      "rows": 2
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1309",
+      "path": "raw/quantitative/nbs_cpi/packages/1309_CPI_October2025.zip",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:08.048770+00:00",
+      "sha256": "19b6073902befce2ef58420399bf829957ce24356bc93ccf201525cca8c60278",
+      "bytes": 1420086,
+      "rows": 2
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1325",
+      "path": "raw/quantitative/nbs_cpi/packages/1325_CPI_November_2025.zip",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:06.502980+00:00",
+      "sha256": "5a16e38bf1b872ed55db29a6407ed381c5c7a09c9de846bbe3aa7af15cafa86d",
+      "bytes": 1399679,
+      "rows": 2
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1334",
+      "path": "raw/quantitative/nbs_cpi/packages/1334_CPI_December_2025_Report.zip",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:05.116352+00:00",
+      "sha256": "152a3431d4b0ee8275e9ea2413bae2b9a9f86b09c343265e7713239efdb1bcc5",
+      "bytes": 2245552,
+      "rows": 2
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1353",
+      "path": "raw/quantitative/nbs_cpi/packages/1353_CPI_Report_January_2026.zip",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:03.281070+00:00",
+      "sha256": "870ff7a5cbeddd32d84e6cb23630df715b92ec560dccff0d8a0914ea9e34d7b2",
+      "bytes": 2254091,
+      "rows": 2
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1372",
+      "path": "raw/quantitative/nbs_cpi/packages/1372_CPI_Report_FEBRUARY_2026.zip",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:17:01.380558+00:00",
+      "sha256": "5c0077d52c9d6da86bd5ed474111e68d07b601ed052dd54b9f4136574a857195",
+      "bytes": 2326610,
+      "rows": 2
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1394",
+      "path": "raw/quantitative/nbs_cpi/packages/1394_CPI_Report_March_2026.zip",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:16:59.263648+00:00",
+      "sha256": "b4ea85b0866fe1ed8d3792fee34a412dcfaa74ba8a600ef505972ffaa9aaa281",
+      "bytes": 2091112,
+      "rows": 2
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1406",
+      "path": "raw/quantitative/nbs_cpi/packages/1406_CPI_APRIL_2026.zip",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:16:57.383590+00:00",
+      "sha256": "442b768de291eba2fea1e7eb84f3fac2fdc6fcb3aad71f307bd1765633d0aa2e",
+      "bytes": 2340775,
+      "rows": 2
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1422",
+      "path": "raw/quantitative/nbs_cpi/packages/1422_CPI_MAY_2026.zip",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:16:55.442924+00:00",
+      "sha256": "e5490c7cf7d5e72d15449962fea1950645344bee8e535dd78de01d1236e42f7a",
+      "bytes": 2445866,
+      "rows": 2
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1431",
+      "path": "raw/quantitative/nbs_cpi/packages/1431_CPI_JUNE_2026.zip",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:16:53.365167+00:00",
+      "sha256": "97b2123c268211bca77bd01f910728dbc59a939dd1c29c366383b9e6b463da40",
+      "bytes": 2488680,
+      "rows": 2
+    },
+    {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/154/download/1432",
+      "path": "raw/quantitative/nbs_cpi/packages/1432_CPI_JULY_2026.zip",
+      "content_type": "application/octet-stream",
+      "fetched_at": "2026-09-02T17:16:51.364143+00:00",
+      "sha256": "a1e8c555dd456af92c91662d9545198367244e4b446440c322b76a62bc83290f",
+      "bytes": 2491457,
+      "rows": 2
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/BN.CAB.XOKA.CD?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/BN.CAB.XOKA.CD.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:07:56.565507+00:00",
+      "sha256": "a4e1b16701c5c9a780f4749faf6c46b4536cba3f32b4f3abc0574388aaf8e8b5",
+      "bytes": 5017,
+      "rows": 20
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/BX.KLT.DINV.CD.WD?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/BX.KLT.DINV.CD.WD.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:07:53.461955+00:00",
+      "sha256": "0837bf2add106ce2ae58f9767e9aecd03bf3d0a87a846b9431e8aeace4860ff6",
+      "bytes": 5365,
+      "rows": 20
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/BX.PEF.TOTL.CD.WD?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/BX.PEF.TOTL.CD.WD.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:07:55.157370+00:00",
+      "sha256": "40d7d237a0e323d46753a39c577fa89fb4902ed0c8447f79b7a0e0fc52bd6a42",
+      "bytes": 5187,
+      "rows": 20
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/BX.TRF.PWKR.CD.DT?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/BX.TRF.PWKR.CD.DT.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:08:03.090209+00:00",
+      "sha256": "88501297f94770e328dceef6f3646453d2c8e3c38a4664cbd6b9e67d4c9360c7",
+      "bytes": 5106,
+      "rows": 20
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/CM.MKT.INDX.ZG?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/CM.MKT.INDX.ZG.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:08:04.748603+00:00",
+      "sha256": "ea8d99c2f93493f28a78499f6a77854f463ef8c8c02ce5790d4253d748a6db7d",
+      "bytes": 5488,
+      "rows": 20
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/FI.RES.TOTL.CD?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/FI.RES.TOTL.CD.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:07:48.475160+00:00",
+      "sha256": "6cc763d84ab0d74f5fdca60ab7b89f3296f126e8f88984c1855c2bbe1477b339",
+      "bytes": 5028,
+      "rows": 20
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/FM.LBL.BMNY.ZG?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/FM.LBL.BMNY.ZG.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:07:51.093179+00:00",
+      "sha256": "12f31f49c626f0f6031610ffb1fdc7bcf3265be90ee7ad09663fe050d5d36c1f",
+      "bytes": 4730,
+      "rows": 20
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/FP.CPI.TOTL.ZG?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/FP.CPI.TOTL.ZG.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:07:44.225529+00:00",
+      "sha256": "b07b9f716bd1947d70855fed9b28761415986d75791c54863ed2bd7b148cbd6b",
+      "bytes": 4911,
+      "rows": 20
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/GC.DOD.TOTL.GD.ZS?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/GC.DOD.TOTL.GD.ZS.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:08:06.041509+00:00",
+      "sha256": "b46563ac145cf6de4dcec85bceec5ed844c4f4585194e963c43f2490275f2759",
+      "bytes": 4813,
+      "rows": 20
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/NE.EXP.GNFS.CD?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/NE.EXP.GNFS.CD.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:07:59.663501+00:00",
+      "sha256": "9ac039ad391222d9b1665077f3965bf664068849740da54d704c6731a8f48534",
+      "bytes": 4793,
+      "rows": 20
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/NE.IMP.GNFS.CD?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/NE.IMP.GNFS.CD.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:08:01.653971+00:00",
+      "sha256": "8e7ca0bb7385b8036caf0943446ba3c57178f000093784053ac801af1af94299",
+      "bytes": 4793,
+      "rows": 20
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/NY.GDP.MKTP.CD?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/NY.GDP.MKTP.CD.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:07:46.880619+00:00",
+      "sha256": "9f776eb89466d9bda2c9202d625dcb1c574f656dc16471461ef85fe6d6ddc008",
+      "bytes": 4507,
+      "rows": 20
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/NY.GDP.MKTP.KD.ZG?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/NY.GDP.MKTP.KD.ZG.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:07:45.556700+00:00",
+      "sha256": "4d1a2bdcb08795401690b5f6125ffc93dbceae905dbc8fc14bc3d2b158914d4c",
+      "bytes": 4654,
+      "rows": 20
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/NY.GDP.PETR.RT.ZS?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/NY.GDP.PETR.RT.ZS.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:07:58.017728+00:00",
+      "sha256": "ce23962f7113cf7462e88265489b9b2c6fc578f1e9e1704ab9e0fac0082ccf87",
+      "bytes": 4583,
+      "rows": 20
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/NGA/indicator/PA.NUS.FCRF?date=2006:2026&format=json&per_page=1000&footnote=y",
+      "path": "raw/quantitative/world_bank/PA.NUS.FCRF.json",
+      "content_type": "application/json;charset=utf-8",
+      "fetched_at": "2026-09-02T16:06:54.698229+00:00",
+      "sha256": "532f151c52943e81d329499cf1be0548f93af97960ad9475b1e79aab9505b475",
+      "bytes": 5107,
+      "rows": 20
+    },
+    {
+      "url": "https://www.bankofengland.co.uk/sitemap/minutes",
+      "path": "raw/unstructured/boe/minutes.html",
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-09-02T16:11:41.259026+00:00",
+      "sha256": "1d878dff6476fca9931001be908706f8cffb4d5854c95eb1926879ea1389b7d3",
+      "bytes": 734749,
+      "rows": null
+    },
+    {
+      "url": "https://www.cbn.gov.ng/api/GetAllCirculars",
+      "path": "raw/unstructured/cbn/cbn_circulars.json",
+      "content_type": "application/json; charset=utf-8",
+      "fetched_at": "2026-09-02T16:10:55.622036+00:00",
+      "sha256": "9c6085e7b605b27cc78ef12946007e9b44d52a5d50eed70f8a0405f5a8ae3b90",
+      "bytes": 1177723,
+      "rows": 2629
+    },
+    {
+      "url": "https://www.cbn.gov.ng/api/GetAllPressReleases",
+      "path": "raw/unstructured/cbn/cbn_press_releases.json",
+      "content_type": "application/json; charset=utf-8",
+      "fetched_at": "2026-09-02T16:10:56.491719+00:00",
+      "sha256": "33559f0b4fd1d42edc47de6f9b89c4f32df828ffba8eb04c36ecf34bb08c5e57",
+      "bytes": 128346,
+      "rows": 306
+    },
+    {
+      "url": "https://www.dmo.gov.ng/fgn-bonds/bonds-auction-results?limit=100&limitstart=0&direction=asc",
+      "path": "raw/unstructured/dmo/bond_auction_index_0000.html",
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-09-02T16:11:06.539385+00:00",
+      "sha256": "7e8372e8577d8537a38bc4a4bcc8b0c06d3768c0035ee2795b295c99924031cd",
+      "bytes": 491489,
+      "rows": 100
+    },
+    {
+      "url": "https://www.dmo.gov.ng/fgn-bonds/bonds-auction-results?limit=100&limitstart=100&direction=asc",
+      "path": "raw/unstructured/dmo/bond_auction_index_0100.html",
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-09-02T16:11:12.863699+00:00",
+      "sha256": "37e26d039504fd3fc258e42edcd0453967482c566a615d96e6bac2c6f5011e12",
+      "bytes": 498357,
+      "rows": 100
+    },
+    {
+      "url": "https://www.dmo.gov.ng/fgn-bonds/bonds-auction-results?limit=100&limitstart=200&direction=asc",
+      "path": "raw/unstructured/dmo/bond_auction_index_0200.html",
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-09-02T16:11:15.925970+00:00",
+      "sha256": "ec32ff7222faebd4c2b2fd57d7900cd4d78d76da63918ef029a10d3f1e386204",
+      "bytes": 171903,
+      "rows": 23
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2006.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2006.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:17.444085+00:00",
+      "sha256": "543b0cf670b4e4654cafa41b6eda714719bdd49f26109f1f458c295b50d4a75a",
+      "bytes": 91937,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2007.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2007.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:18.291454+00:00",
+      "sha256": "ab57b53d3cae5c085dec87440a3c889b9368127075d0eecd6bdd3ce885c5a5d3",
+      "bytes": 94735,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2008.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2008.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:19.171897+00:00",
+      "sha256": "c2207ead68f157037acb13a424d2ce01a271b37682a9c46eed5e260da5ecdf3b",
+      "bytes": 99958,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2009.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2009.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:19.958249+00:00",
+      "sha256": "7371c877c1a1d81d2401dd2e9ab2bd5071bc3c37fdebe97bc86dac8842c06675",
+      "bytes": 98208,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2010.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2010.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:20.754498+00:00",
+      "sha256": "02e05e396ad14ee12a9b79074c1b4875b9b0db22a8970cabd738bfc15fb677cc",
+      "bytes": 96176,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2011.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2011.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:21.491369+00:00",
+      "sha256": "d0e714afb8cdc82d2bec074db41b48316deaf21f955b288cb87dfff203f7b263",
+      "bytes": 98183,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2012.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2012.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:22.419057+00:00",
+      "sha256": "1f7a4bd1a66f4ef1172424c99317b1a83bdeaa7e88381a3fdbe1e8a97714d8a4",
+      "bytes": 98104,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2013.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2013.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:23.456284+00:00",
+      "sha256": "11f2501b7b01832ab79cab19ff7a9112d2dc1aa51246c7ce211580a9f9455c8d",
+      "bytes": 95765,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2014.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2014.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:24.212817+00:00",
+      "sha256": "6f3c84d146457a252ea77532bac43e880778cc8a6ecc33754602e193f3e4dec4",
+      "bytes": 96045,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2015.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2015.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:25.036419+00:00",
+      "sha256": "0a92e0c19b48dab52368f6b3f00e9957460b2a8146fd591e95841bfc1f5d9131",
+      "bytes": 95197,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2016.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2016.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:25.780017+00:00",
+      "sha256": "8f44b14abf57b87637086f0063e928db65d57913481dad130d5cb2587eae3fd6",
+      "bytes": 95785,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2017.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2017.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:26.512321+00:00",
+      "sha256": "3911bf34c345d6fc53a8aa4c38d1c617cd8f62fbe5520fd08b1935b6c7c1b0c4",
+      "bytes": 95156,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2018.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2018.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:27.266623+00:00",
+      "sha256": "2c896780e6bd99e4cb407fdf5aa17a55b29d3e54022315f4b049387e4966c8bf",
+      "bytes": 95661,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2019.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2019.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:28.006511+00:00",
+      "sha256": "f8e7434774a9fe21bc03fe80286d704469bcbb40aacaa79eab21813d8662bdd1",
+      "bytes": 97300,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomchistorical2020.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_2020.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:28.750820+00:00",
+      "sha256": "c9a7eacba82217156d25ddb2df2853dafd8c6581b9130fe9d2e7e6ab9fcedeca",
+      "bytes": 98511,
+      "rows": null
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "path": "raw/unstructured/federal_reserve/fomc_current_calendars.html",
+      "content_type": "text/html",
+      "fetched_at": "2026-09-02T16:11:29.555101+00:00",
+      "sha256": "df38fede2677153345b40d4391a675480887ecc85edc363675f850b7f57d8682",
+      "bytes": 164831,
+      "rows": null
+    },
+    {
+      "url": "https://businessday.ng/sitemap_index.xml",
+      "path": "raw/unstructured/publisher_sitemaps/businessday_ng.xml",
+      "content_type": "text/xml; charset=UTF-8",
+      "fetched_at": "2026-09-02T16:10:13.457866+00:00",
+      "sha256": "7b9d39a2c3c96dbd6000adc84979ecb6bfb7ef6aab34ad4510c778a8535c8204",
+      "bytes": 195371,
+      "rows": 1545
+    },
+    {
+      "url": "https://nairametrics.com/sitemap_index.xml",
+      "path": "raw/unstructured/publisher_sitemaps/nairametrics.xml",
+      "content_type": "text/xml; charset=UTF-8",
+      "fetched_at": "2026-09-02T16:10:12.001602+00:00",
+      "sha256": "606aee275eafb896e9eb15fa8ca0394e3aab1112fa59fd2553b0a364c545f2d8",
+      "bytes": 12199,
+      "rows": 94
+    },
+    {
+      "url": "https://www.premiumtimesng.com/sitemap_index.xml",
+      "path": "raw/unstructured/publisher_sitemaps/premium_times.xml",
+      "content_type": "text/xml; charset=UTF-8",
+      "fetched_at": "2026-09-02T16:10:32.232199+00:00",
+      "sha256": "dae40b26262ff21b74e3acb8992e3919f676e8f3f6931e9abb11820fedef2120",
+      "bytes": 67208,
+      "rows": 493
+    },
+    {
+      "url": "https://www.vanguardngr.com/sitemap_index.xml",
+      "path": "raw/unstructured/publisher_sitemaps/vanguard_ng.xml",
+      "content_type": "text/xml; charset=UTF-8",
+      "fetched_at": "2026-09-02T16:10:29.508116+00:00",
+      "sha256": "b867c90236c4ea06280674c92aade0fd6228b74e68bac47a854516b79a9eabdb",
+      "bytes": 129497,
+      "rows": 985
+    }
+  ]
+}

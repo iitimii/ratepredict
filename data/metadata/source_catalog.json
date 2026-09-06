@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.0",
+  "target_window": {
+    "start": "2006-01-01",
+    "end": "2026-09-02",
+    "calendar_days": 7550
+  },
+  "rules": {
+    "raw_policy": "Preserve source responses unchanged and checksum them in acquisition_manifest.json.",
+    "curated_policy": "Normalize dates and fields; when CBN republishes a natural observation, retain the highest source id in curated data and keep all versions in raw data.",
+    "availability_policy": "Join observations to the model calendar by publication/availability date, never by a future revised period date.",
+    "text_policy": "Store document metadata and permitted source text first; create source-specific precomputed embeddings in a later deterministic stage.",
+    "access_policy": "Do not bypass paywalls, authentication, robots exclusions, or publisher access controls."
+  },
+  "sources": [
+    {
+      "id": "cbn_exchange_rates",
+      "modality": "quantitative",
+      "publisher": "Central Bank of Nigeria",
+      "status": "acquired",
+      "frequency": "business-day",
+      "observed_coverage": "2006-01-03/2026-09-02",
+      "feature_family": "official NGN exchange rates by currency",
+      "url": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html"
+    },
+    {
+      "id": "cbn_money_market",
+      "modality": "quantitative",
+      "publisher": "Central Bank of Nigeria",
+      "status": "acquired",
+      "frequency": "monthly",
+      "observed_coverage": "2006-01-01/2026-07-01",
+      "feature_family": "MPR, interbank, treasury, deposit and lending rates",
+      "url": "https://www.cbn.gov.ng/rates/mnymktind.html"
+    },
+    {
+      "id": "cbn_money_credit",
+      "modality": "quantitative",
+      "publisher": "Central Bank of Nigeria",
+      "status": "acquired",
+      "frequency": "monthly",
+      "observed_coverage": "2006-01-01/2026-07-01",
+      "feature_family": "M2, M3, M1, quasi money, reserve money, credit and monetary aggregates",
+      "url": "https://www.cbn.gov.ng/rates/mnycredit.html"
+    },
+    {
+      "id": "cbn_inflation",
+      "modality": "quantitative",
+      "publisher": "Central Bank of Nigeria",
+      "status": "acquired",
+      "frequency": "monthly",
+      "observed_coverage": "2006-01-01/2026-06-01",
+      "feature_family": "headline, food and core inflation rates and twelve-month averages",
+      "url": "https://www.cbn.gov.ng/rates/inflrates.html"
+    },
+    {
+      "id": "cbn_government_securities",
+      "modality": "quantitative",
+      "publisher": "Central Bank of Nigeria",
+      "status": "acquired",
+      "frequency": "auction-event",
+      "observed_coverage": "2006-01-03/2026-09-02",
+      "feature_family": "NTB, OMO, FGN bond and CBN bill auctions, subscriptions, allotments and rates",
+      "url": "https://www.cbn.gov.ng/rates/GovtSecuritiesDrillDown.html?market=OMO"
+    },
+    {
+      "id": "cbn_reserves",
+      "modality": "quantitative",
+      "publisher": "Central Bank of Nigeria",
+      "status": "acquired",
+      "frequency": "business-day",
+      "observed_coverage": "2006-04-03/2026-09-01",
+      "feature_family": "gross, liquid and blocked external reserves",
+      "url": "https://www.cbn.gov.ng/IntOps/Reserve.html"
+    },
+    {
+      "id": "cbn_daily_crude",
+      "modality": "quantitative",
+      "publisher": "Central Bank of Nigeria",
+      "status": "acquired_partial_window",
+      "frequency": "business-day",
+      "observed_coverage": "2009-10-23/2026-09-02",
+      "feature_family": "Nigeria reference/Bonny crude price",
+      "url": "https://www.cbn.gov.ng/rates/DailyCrude.html"
+    },
+    {
+      "id": "cbn_nfem",
+      "modality": "quantitative",
+      "publisher": "Central Bank of Nigeria",
+      "status": "acquired_partial_window",
+      "frequency": "business-day",
+      "observed_coverage": "2024-12-02/2026-09-02",
+      "feature_family": "NFEM OHLC-like rates, turnover and deal counts",
+      "url": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html"
+    },
+    {
+      "id": "fred_global_macro",
+      "modality": "quantitative",
+      "publisher": "Federal Reserve Bank of St. Louis and named upstream publishers",
+      "status": "acquired",
+      "frequency": "daily/monthly",
+      "observed_coverage": "2006-01-01/2026-09-01",
+      "feature_family": "DGS2, DGS10, DFF, DTWEXBGS, DCOILBRENTEU, VIXCLS, CPIAUCSL, T10YIE",
+      "url": "https://fred.stlouisfed.org/"
+    },
+    {
+      "id": "fred_us_high_yield_spread",
+      "modality": "quantitative",
+      "publisher": "ICE BofA via FRED",
+      "status": "acquired_partial_window",
+      "frequency": "daily",
+      "observed_coverage": "2023-09-04/2026-09-01",
+      "feature_family": "US high-yield option-adjusted spread",
+      "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
+    },
+    {
+      "id": "world_bank_nigeria",
+      "modality": "quantitative",
+      "publisher": "World Bank",
+      "status": "acquired",
+      "frequency": "annual",
+      "observed_coverage": "2006/2025",
+      "feature_family": "inflation, GDP, reserves, broad money, FDI/FPI, trade, current account, remittances, oil rents and equity performance",
+      "url": "https://api.worldbank.org/v2/country/NGA"
+    },
+    {
+      "id": "quidax_usdtngn_btcngn",
+      "modality": "quantitative",
+      "publisher": "Quidax and local BigQuery exports",
+      "status": "existing_partial_window_quality_review_required",
+      "frequency": "2-hour",
+      "observed_coverage": "2020-01-08/2026-03-10",
+      "feature_family": "USDT/NGN and BTC/NGN OHLCV/trade aggregates",
+      "url": "https://app.quidax.io/api/v1/markets/usdtngn/k"
+    },
+    {
+      "id": "ngx_asi",
+      "modality": "quantitative",
+      "publisher": "Nigerian Exchange Group",
+      "status": "pending_official_or_licensed_history",
+      "frequency": "daily",
+      "observed_coverage": null,
+      "feature_family": "NGX All-Share Index OHLC/performance/turnover",
+      "url": "https://ngxgroup.com/"
+    },
+    {
+      "id": "parallel_usdngn",
+      "modality": "quantitative",
+      "publisher": "To be licensed/verified",
+      "status": "blocked_no_authoritative_20y_public_feed",
+      "frequency": "daily",
+      "observed_coverage": null,
+      "feature_family": "parallel-market USD/NGN",
+      "url": null
+    },
+    {
+      "id": "nbs_monthly_cpi",
+      "modality": "quantitative",
+      "publisher": "National Bureau of Statistics Nigeria",
+      "status": "pending_historical_file_ingestion",
+      "frequency": "monthly",
+      "observed_coverage": null,
+      "feature_family": "headline/core/food CPI and inflation",
+      "url": "https://microdata.nigerianstat.gov.ng/"
+    },
+    {
+      "id": "cbn_circulars",
+      "modality": "unstructured",
+      "publisher": "Central Bank of Nigeria",
+      "status": "metadata_acquired_body_download_pending",
+      "frequency": "event",
+      "observed_coverage": "2006-01-03/2026-08-12",
+      "feature_family": "policy and regulatory circular text",
+      "url": "https://www.cbn.gov.ng/documents/circulars.html"
+    },
+    {
+      "id": "cbn_press_releases",
+      "modality": "unstructured",
+      "publisher": "Central Bank of Nigeria",
+      "status": "metadata_acquired_body_download_pending",
+      "frequency": "event",
+      "observed_coverage": "2006-01-03/2026-08-11",
+      "feature_family": "press release text",
+      "url": "https://www.cbn.gov.ng/Documents/"
+    },
+    {
+      "id": "dmo_fgn_bond_auction_results",
+      "modality": "unstructured",
+      "publisher": "Debt Management Office Nigeria",
+      "status": "metadata_acquired_body_download_pending",
+      "frequency": "event/monthly",
+      "observed_coverage": "2008-01-03/2026-08-17",
+      "feature_family": "FGN auction issue, bid, allotment, yield and maturity documents",
+      "url": "https://www.dmo.gov.ng/fgn-bonds/bonds-auction-results"
+    },
+    {
+      "id": "fomc_documents",
+      "modality": "unstructured",
+      "publisher": "Federal Reserve Board",
+      "status": "index_acquired_body_download_pending",
+      "frequency": "event",
+      "observed_coverage": "2006/2026",
+      "feature_family": "FOMC statements, minutes and projections",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomc_historical_year.htm"
+    },
+    {
+      "id": "boe_mpc_minutes",
+      "modality": "unstructured",
+      "publisher": "Bank of England",
+      "status": "index_acquired_body_download_pending",
+      "frequency": "event",
+      "observed_coverage": "2006/2026",
+      "feature_family": "MPC summaries and minutes",
+      "url": "https://www.bankofengland.co.uk/sitemap/minutes"
+    },
+    {
+      "id": "nairametrics",
+      "modality": "unstructured",
+      "publisher": "Nairametrics",
+      "status": "sitemap_index_acquired_article_crawl_pending",
+      "frequency": "article",
+      "observed_coverage": "2012-08/2026-09",
+      "feature_family": "Nigeria finance and economy news",
+      "url": "https://nairametrics.com/sitemap_index.xml"
+    },
+    {
+      "id": "businessday_ng",
+      "modality": "unstructured",
+      "publisher": "BusinessDay NG",
+      "status": "sitemap_index_acquired_article_crawl_pending",
+      "frequency": "article",
+      "observed_coverage": "2009-09/2026-09",
+      "feature_family": "Nigeria business and economy news",
+      "url": "https://businessday.ng/sitemap_index.xml"
+    },
+    {
+      "id": "vanguard_ng",
+      "modality": "unstructured",
+      "publisher": "Vanguard NG",
+      "status": "sitemap_index_acquired_article_crawl_pending",
+      "frequency": "article",
+      "observed_coverage": "2009-06/2026-09",
+      "feature_family": "Nigeria business news",
+      "url": "https://www.vanguardngr.com/sitemap_index.xml"
+    },
+    {
+      "id": "premium_times",
+      "modality": "unstructured",
+      "publisher": "Premium Times",
+      "status": "sitemap_index_acquired_article_crawl_pending",
+      "frequency": "article",
+      "observed_coverage": "2012-04/2026-09",
+      "feature_family": "Nigeria business and public-policy news",
+      "url": "https://www.premiumtimesng.com/sitemap_index.xml"
+    },
+    {
+      "id": "thisday_live",
+      "modality": "unstructured",
+      "publisher": "ThisDay Live",
+      "status": "blocked_by_current_robots_policy",
+      "frequency": "article",
+      "observed_coverage": "site sitemap appears to start 2016; not crawled",
+      "feature_family": "Nigeria business news",
+      "url": "https://www.thisdaylive.com/robots.txt"
+    },
+    {
+      "id": "punch_ng",
+      "modality": "unstructured",
+      "publisher": "Punch NG",
+      "status": "blocked_sitemap_returns_http_500",
+      "frequency": "article",
+      "observed_coverage": null,
+      "feature_family": "Nigeria business news",
+      "url": "https://punchng.com/sitemap_index.xml"
+    },
+    {
+      "id": "imf_news",
+      "modality": "unstructured",
+      "publisher": "International Monetary Fund",
+      "status": "pending_archive_indexer_rss_is_recent_only",
+      "frequency": "article/event",
+      "observed_coverage": "individual Nigeria releases verified in 2006",
+      "feature_family": "Nigeria and global macro releases",
+      "url": "https://www.imf.org/en/News"
+    },
+    {
+      "id": "google_news",
+      "modality": "unstructured",
+      "publisher": "Google News",
+      "status": "not_suitable_as_20y_bulk_archive",
+      "frequency": "article index",
+      "observed_coverage": null,
+      "feature_family": "query aggregation",
+      "url": "https://news.google.com/"
+    }
+  ]
+}
