@@ -19,8 +19,11 @@ class DatasetConfig:
     avg_rate_column: str = "avg_rate"
     high_rate_column: str = "high_rate"
     low_rate_column: str = "low_rate"
+    label_policy: str = "strict"
 
     def __post_init__(self) -> None:
+        if self.label_policy not in {"strict", "masked"}:
+            raise ValueError("label_policy must be strict or masked")
         if self.lookback_days <= 0:
             raise ValueError("lookback_days must be a positive integer")
         if self.horizon_days <= 0:
@@ -176,9 +179,11 @@ def discover_valid_sample_end_dates(
     stop_position = len(prepared.dates) - config.horizon_days
     for position in range(first_position, stop_position):
         current_average_available = prepared.target_rate_mask[position, 0]
-        future_targets_available = prepared.target_rate_mask[
+        future_daily_mask = prepared.target_rate_mask[
             position + 1 : position + 1 + config.horizon_days
-        ].all()
+        ].all(axis=1)
+        future_targets_available = (future_daily_mask.any() if config.label_policy == "masked"
+                                    else future_daily_mask.all())
         if current_average_available and future_targets_available:
             positions.append(position)
 
@@ -226,6 +231,11 @@ def _raw_target_for_position(
     future = prepared.target_rates[
         position + 1 : position + 1 + config.horizon_days
     ]
+    if config.label_policy == "masked":
+        target = np.column_stack((future[:, 0] - prepared.target_rates[position, 0],
+                                  future[:, 1] - future[:, 0], future[:, 2] - future[:, 0]))
+        target[~np.isfinite(future).all(axis=1)] = np.nan
+        return target
     return LabelSchema.from_rates(
         present_average_rate=float(prepared.target_rates[position, 0]),
         future_average_rates=future[:, 0],
@@ -324,7 +334,7 @@ class DailyMultimodalDataset(Dataset):
             TARGET_NAMES,
         )
 
-        return {
+        result = {
             "quantitative": torch.from_numpy(
                 np.ascontiguousarray(quantitative, dtype=np.float32)
             ),
@@ -343,3 +353,6 @@ class DailyMultimodalDataset(Dataset):
                 dtype=torch.int64,
             ),
         }
+        if self.config.label_policy == "masked":
+            result["target_mask"] = torch.from_numpy(np.isfinite(raw_target))
+        return result
