@@ -1,0 +1,82 @@
+schema_version: 2
+runtime_dir: transformer-based/runtime
+lookback_days: 365
+horizon_days: 7
+calendar_start: '2006-01-01'
+label_policy: masked
+bucket_timestamp: start
+bar_hours: 2
+min_text_source_days: 30
+seed: 42
+resources:
+  reserve_disk_gb: 5
+  max_process_gb: 10
+  min_available_gb: 2
+  background_available_gb: 3
+  raw_budget_gb: 1
+  host_pause_seconds: 2
+  request_timeout_seconds: 40
+  max_download_mb: 50
+tracking:
+  project: ratepredict-transformer-research
+  entity: null
+  require_online: true
+training:
+  gradient_clip: 1
+  channel_weights: [0.5, 0.25, 0.25]
+  seeds: [42, 7, 21]
+  chronos:
+    repository: amazon/chronos-2
+    revision: 29ec3766d36d6f73f0696f85560a422f50e8498c
+    rank: 8
+    alpha: 16
+    learning_rate: 0.00001
+    accumulation: 8
+    max_steps: 1000
+    eval_every: 100
+    patience: 3
+  qwen:
+    rank: 8
+    scale: 2
+    layers: 8
+    patch_days: 8
+    max_tokens: 128
+    learning_rate: 0.0001
+    head_learning_rate: 0.0003
+    accumulation: 16
+    epochs: 5
+    max_steps: 600
+    patience: 2
+    warmup_epochs: 1
+models:
+  qwen_08:
+    repository: mlx-community/Qwen3.5-0.8B-4bit
+    revision: da28692b5f139cb0ec58a356b437486b7dac7462
+    official: Qwen/Qwen3.5-0.8B
+  qwen_2:
+    repository: mlx-community/Qwen3.5-2B-4bit
+    revision: 674aaa7240b91e8012fcad5d791b7dfe5ba90207
+    official: Qwen/Qwen3.5-2B
+  qwen_4:
+    repository: mlx-community/Qwen3.5-4B-4bit
+    revision: 0e7ffd5c629ef7719d4cbc04069232580bfa9d9c
+    official: Qwen/Qwen3.5-4B
+embedding:
+  repository: BAAI/bge-small-en-v1.5
+  dimensions: 384
+  chunk_tokens: 384
+  overlap_tokens: 64
+  max_tokens: 512
+folds:
+  dev1:
+    train_end: '2023-12-31'
+    eval_start: '2024-01-01'
+    eval_end: '2024-06-30'
+  dev2:
+    train_end: '2024-06-30'
+    eval_start: '2024-07-01'
+    eval_end: '2024-12-31'
+  final:
+    train_end: '2024-12-31'
+    eval_start: '2025-01-01'
+    eval_end: '2026-03-10'
